@@ -12,24 +12,24 @@ import java.util.Random;
 
 public class TempleRunGame extends JPanel implements ActionListener, KeyListener {
 
-//    private int runnerX = 50, runnerY = 250, runnerWidth = 30, runnerHeight = 40;
-//    private int velocityY = 0;
-//    private boolean onGround = true;
-//    private int score = 0;
-//    private Timer timer;
-//    private ArrayList<Rectangle> obstacles;
-//    private Random random;
+    private int runnerX = 50, runnerY = 250, runnerWidth = 30, runnerHeight = 40;
+    private int velocityY = 0;
+    private boolean onGround = true;
+    private int score = 0;
+    private Timer timer;
+    private ArrayList<Rectangle> obstacles;
+    private Random random;
 
-//    public TempleRunGame() {
-//        setPreferredSize(new Dimension(500, 300));
-//        setBackground(Color.WHITE);
-//        setFocusable(true);
-//        addKeyListener(this);
-//        timer = new Timer(20, this);
-//        obstacles = new ArrayList<>();
-//        random = new Random();
-//        timer.start();
-//    }
+    public TempleRunGame() {
+        setPreferredSize(new Dimension(500, 300));
+        setBackground(Color.WHITE);
+        setFocusable(true);
+        addKeyListener(this);
+        timer = new Timer(20, this);
+        obstacles = new ArrayList<>();
+        random = new Random();
+        timer.start();
+    }
 
 //    @Override
 //    protected void paintComponent(Graphics g) {
