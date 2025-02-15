@@ -31,24 +31,24 @@ public class TempleRunGame extends JPanel implements ActionListener, KeyListener
         timer.start();
     }
 
-//    @Override
-//    protected void paintComponent(Graphics g) {
-//        super.paintComponent(g);
-//
-//        // Runner
-//        g.setColor(Color.BLUE);
-//        g.fillRect(runnerX, runnerY, runnerWidth, runnerHeight);
-//
-//        // Obstacles
-//        g.setColor(Color.RED);
-//        for (Rectangle obstacle : obstacles) {
-//            g.fillRect(obstacle.x, obstacle.y, obstacle.width, obstacle.height);
-//        }
-//
-//        // Score
-//        g.setColor(Color.BLACK);
-//        g.drawString("Score: " + score, 10, 20);
-//    }
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+
+        // Runner
+        g.setColor(Color.BLUE);
+        g.fillRect(runnerX, runnerY, runnerWidth, runnerHeight);
+
+        // Obstacles
+        g.setColor(Color.RED);
+        for (Rectangle obstacle : obstacles) {
+            g.fillRect(obstacle.x, obstacle.y, obstacle.width, obstacle.height);
+        }
+
+        // Score
+        g.setColor(Color.BLACK);
+        g.drawString("Score: " + score, 10, 20);
+    }
 
 //    @Override
 //    public void actionPerformed(ActionEvent e) {
