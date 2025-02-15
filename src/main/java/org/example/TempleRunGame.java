@@ -69,50 +69,50 @@ public class TempleRunGame extends JPanel implements ActionListener, KeyListener
                 score += 10;
             }
         }
-//
-//
-//        if (random.nextInt(100) < 2) {
-//            obstacles.add(new Rectangle(500, 260, 30, 30));
-//        }
-//
-//
-//        for (Rectangle obstacle : obstacles) {
-//            if (obstacle.intersects(new Rectangle(runnerX, runnerY, runnerWidth, runnerHeight))) {
-//                timer.stop();
-//                JOptionPane.showMessageDialog(this, "Game Over! Score: " + score);
-//                System.exit(0);
-//            }
-//        }
-//
-//        repaint();
-//    }
 
-//    @Override
-//    public void keyPressed(KeyEvent e) {
-//        if (e.getKeyCode() == KeyEvent.VK_UP && onGround) {
-//            velocityY = -12;
-//            onGround = false;
-//        }
-//        if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
-//            runnerX += 10;
-//        }
-//    }
 
-//    @Override
-//    public void keyReleased(KeyEvent e) {
-//    }
-//
-//    @Override
-//    public void keyTyped(KeyEvent e) {
-//    }
+        if (random.nextInt(100) < 2) {
+            obstacles.add(new Rectangle(500, 260, 30, 30));
+        }
 
-//    public static void main(String[] args) {
-//        JFrame frame = new JFrame("Temple Run");
-//        TempleRunGame game = new TempleRunGame();
-//        frame.add(game);
-//        frame.pack();
-//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        frame.setVisible(true);
-//        frame.setLocationRelativeTo(null);
-//    }
+
+        for (Rectangle obstacle : obstacles) {
+            if (obstacle.intersects(new Rectangle(runnerX, runnerY, runnerWidth, runnerHeight))) {
+                timer.stop();
+                JOptionPane.showMessageDialog(this, "Game Over! Score: " + score);
+                System.exit(0);
+            }
+        }
+
+        repaint();
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        if (e.getKeyCode() == KeyEvent.VK_UP && onGround) {
+            velocityY = -12;
+            onGround = false;
+        }
+        if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+            runnerX += 10;
+        }
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+    }
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Temple Run");
+        TempleRunGame game = new TempleRunGame();
+        frame.add(game);
+        frame.pack();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
+    }
 }
