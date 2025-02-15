@@ -50,25 +50,25 @@ public class TempleRunGame extends JPanel implements ActionListener, KeyListener
         g.drawString("Score: " + score, 10, 20);
     }
 
-//    @Override
-//    public void actionPerformed(ActionEvent e) {
-//        runnerY += velocityY;
-//        if (runnerY >= 250) {
-//            runnerY = 250;
-//            onGround = true;
-//        } else {
-//            velocityY += 1;
-//        }
-//
-//
-//        for (int i = 0; i < obstacles.size(); i++) {
-//            Rectangle obstacle = obstacles.get(i);
-//            obstacle.x -= 5;
-//            if (obstacle.x + obstacle.width < 0) {
-//                obstacles.remove(i);
-//                score += 10;
-//            }
-//        }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        runnerY += velocityY;
+        if (runnerY >= 250) {
+            runnerY = 250;
+            onGround = true;
+        } else {
+            velocityY += 1;
+        }
+
+
+        for (int i = 0; i < obstacles.size(); i++) {
+            Rectangle obstacle = obstacles.get(i);
+            obstacle.x -= 5;
+            if (obstacle.x + obstacle.width < 0) {
+                obstacles.remove(i);
+                score += 10;
+            }
+        }
 //
 //
 //        if (random.nextInt(100) < 2) {
